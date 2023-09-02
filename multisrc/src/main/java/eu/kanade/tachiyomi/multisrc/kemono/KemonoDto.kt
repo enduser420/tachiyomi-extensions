@@ -61,7 +61,7 @@ class KemonoPostDto(
             addAll(attachments)
         }.filter {
             when (it.name.substringAfterLast('.').lowercase()) {
-                "png", "jpg", "gif", "jpeg", "webp" -> true
+                "png", "jpg", "gif", "jpe", "jpeg", "webp" -> true
                 else -> false
             }
         }.distinctBy { it.path }.map { it.toString() }
